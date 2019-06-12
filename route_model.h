@@ -21,7 +21,7 @@ class RouteModel : public Model {
       std::vector<Node *> neighbors;
       void FindNeighbors();
       float distance(Node other) const {
-        return std::sqrt(std::pow(2,(x- other.x)) +std::pow(2,(y- other.y)));
+        return std::sqrt(std::pow((x- other.x),2) +std::pow((y- other.y),2));
       }
         
         Node(){}
